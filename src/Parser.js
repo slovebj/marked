@@ -247,6 +247,10 @@ module.exports = class Parser {
           out += renderer.text(token.text);
           break;
         }
+        case 'ic': {
+          out += renderer.ic(token.text);
+          break;
+        }
         default: {
           const errMsg = 'Token with "' + token.type + '" type was not found.';
           if (this.options.silent) {

@@ -445,6 +445,13 @@ module.exports = class Lexer {
         continue;
       }
 
+      // ic
+      if (token = this.tokenizer.ic(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+
       // text
       if (token = this.tokenizer.inlineText(src, inRawBlock, smartypants)) {
         src = src.substring(token.raw.length);

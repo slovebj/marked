@@ -707,4 +707,15 @@ module.exports = class Tokenizer {
       };
     }
   }
+
+  ic(src) {
+    const cap = this.rules.inline.ic.exec(src);
+    if (cap) {
+      return {
+        type: 'ic',
+        raw: cap[0],
+        text: cap[1],
+      };
+    }
+  }
 };

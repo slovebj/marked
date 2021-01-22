@@ -189,7 +189,8 @@ const inline = {
   br: /^( {2,}|\\)\n(?!\s*$)/,
   del: noopTest,
   text: /^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*]|\b_|$)|[^ ](?= {2,}\n)))/,
-  punctuation: /^([\s*punctuation])/
+  punctuation: /^([\s*punctuation])/,
+  ic: /^:([a-zA-Z0-9-_]*):/
 };
 
 // list of punctuation marks from common mark spec
